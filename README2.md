@@ -19,11 +19,21 @@
 
 ## 1. Sprintdoel
 
-Het doel van deze sprint is om de restaurant-reserveringsapp verder te programmeren met React Native en Expo.
+Het doel van Sprint 2 is om mijn restaurant-reserveringsapp verder te ontwikkelen met React Native en Expo.
 
-Tijdens deze sprint wil ik de belangrijkste schermen werkend maken en ervoor zorgen dat gebruikers eenvoudig door de app kunnen navigeren.
+Tijdens deze sprint wil ik werken aan de volgende onderdelen:
 
-Daarnaast wil ik het reserveringsformulier verbeteren en mijn app regelmatig testen op mijn iPhone.
+Home-scherm: een welkomstpagina waarop gebruikers informatie over het restaurant kunnen bekijken.
+
+Menukaart: een pagina waarop gebruikers gerechten met beschrijvingen en prijzen kunnen bekijken.
+
+Reserveringsformulier: een pagina waarop gebruikers hun naam, e-mailadres, datum, tijd en aantal personen kunnen invullen.
+
+Navigatie: ervoor zorgen dat gebruikers gemakkelijk tussen de verschillende schermen kunnen wisselen.
+
+Invoercontrole: controleren of alle velden correct zijn ingevuld, bijvoorbeeld of het e-mailadres geldig is en het aantal personen klopt.
+
+Testen: de app regelmatig op mijn iPhone testen met Expo Go om fouten te ontdekken en op te lossen.
 
 ---
 
@@ -44,15 +54,25 @@ Daarnaast wil ik het reserveringsformulier verbeteren en mijn app regelmatig tes
 
 ### Nog te doen
 
-- [ ] E-mailadres controleren op een geldig formaat.
-- [ ] Datum en tijd controleren.
-- [ ] Aantal personen controleren.
-- [ ] Een apart bevestigingsscherm maken.
-- [ ] Een nieuwsscherm maken.
-- [ ] Een contactscherm maken.
-- [ ] De vormgeving van de schermen verbeteren.
-- [ ] De app testen op fouten.
-- [ ] Sprint 2 afronden.
+- [ ] **E-mailadres controleren:** controleren of de gebruiker een geldig e-mailadres invult, bijvoorbeeld `naam@gmail.com`. Als het e-mailadres niet klopt, moet er een foutmelding verschijnen.
+
+- [ ] **Datum controleren:** controleren of de gebruiker een geldige datum invult en geen datum in het verleden kan gebruiken voor een reservering.
+
+- [ ] **Tijd controleren:** controleren of de gebruiker een geldige tijd invult, bijvoorbeeld `18:30`, en of deze binnen de openingstijden van het restaurant valt.
+
+- [ ] **Aantal personen controleren:** ervoor zorgen dat gebruikers alleen een aantal tussen 1 en 10 personen kunnen invullen.
+
+- [ ] **Bevestigingsscherm maken:** een apart scherm maken waarop de gebruiker na het invullen van het formulier de reserveringsgegevens kan bekijken.
+
+- [ ] **Nieuwsscherm maken:** een pagina toevoegen waarop gebruikers nieuws, aanbiedingen en updates van het restaurant kunnen bekijken.
+
+- [ ] **Contactscherm maken:** een pagina toevoegen met het adres, telefoonnummer, e-mailadres en de locatie van het restaurant.
+
+- [ ] **Vormgeving verbeteren:** zorgen dat alle schermen dezelfde kleuren, knoppen en tekststijlen gebruiken, zodat de app er netjes en overzichtelijk uitziet.
+
+- [ ] **App testen:** alle schermen, knoppen en invoervelden op mijn iPhone testen en eventuele fouten oplossen.
+
+- [ ] **Sprint 2 afronden:** controleren welke taken klaar zijn, mijn Trello-board en README bijwerken en een retrospectief schrijven in `RETRO2.md`.
 
 ---
 
