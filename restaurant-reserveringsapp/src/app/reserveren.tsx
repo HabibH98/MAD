@@ -11,18 +11,33 @@ import {
 } from 'react-native';
 
 export default function ReserverenScreen() {
+  // Gegevens van het reserveringsformulier
   const [naam, setNaam] = useState('');
   const [email, setEmail] = useState('');
   const [datum, setDatum] = useState('');
   const [tijd, setTijd] = useState('');
   const [personen, setPersonen] = useState('');
 
+  // Reservering controleren
   function bevestigReservering() {
+    // Controleren of alle velden zijn ingevuld
     if (!naam || !email || !datum || !tijd || !personen) {
       Alert.alert('Let op', 'Vul alle velden in.');
       return;
     }
 
+    // Controleren of het e-mailadres geldig is
+    const emailControle = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailControle.test(email.trim())) {
+      Alert.alert(
+        'Ongeldig e-mailadres',
+        'Vul een geldig e-mailadres in, bijvoorbeeld naam@gmail.com.'
+      );
+      return;
+    }
+
+    // Bevestiging tonen
     Alert.alert(
       'Reservering ontvangen',
       `Bedankt ${naam}!\n\nDatum: ${datum}\nTijd: ${tijd}\nAantal personen: ${personen}`
@@ -32,10 +47,12 @@ export default function ReserverenScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Tafel reserveren</Text>
+
       <Text style={styles.description}>
         Vul je gegevens in om een tafel te reserveren.
       </Text>
 
+      {/* Naam */}
       <Text style={styles.label}>Naam</Text>
       <TextInput
         style={styles.input}
@@ -44,6 +61,7 @@ export default function ReserverenScreen() {
         onChangeText={setNaam}
       />
 
+      {/* E-mailadres */}
       <Text style={styles.label}>E-mailadres</Text>
       <TextInput
         style={styles.input}
@@ -54,14 +72,16 @@ export default function ReserverenScreen() {
         onChangeText={setEmail}
       />
 
+      {/* Datum */}
       <Text style={styles.label}>Datum</Text>
       <TextInput
         style={styles.input}
-        placeholder="Bijvoorbeeld 20-11-2026"
+        placeholder="Bijvoorbeeld 25-11-2026"
         value={datum}
         onChangeText={setDatum}
       />
 
+      {/* Tijd */}
       <Text style={styles.label}>Tijd</Text>
       <TextInput
         style={styles.input}
@@ -70,6 +90,7 @@ export default function ReserverenScreen() {
         onChangeText={setTijd}
       />
 
+      {/* Aantal personen */}
       <Text style={styles.label}>Aantal personen</Text>
       <TextInput
         style={styles.input}
@@ -79,6 +100,7 @@ export default function ReserverenScreen() {
         onChangeText={setPersonen}
       />
 
+      {/* Reserveringsknop */}
       <Pressable
         style={styles.button}
         onPress={bevestigReservering}
@@ -91,6 +113,7 @@ export default function ReserverenScreen() {
   );
 }
 
+// Vormgeving van het formulier
 const styles = StyleSheet.create({
   container: {
     flex: 1,
