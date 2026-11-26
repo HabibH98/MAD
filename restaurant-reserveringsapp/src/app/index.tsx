@@ -17,7 +17,6 @@ export default function HomeScreen() {
       contentContainerStyle={styles.content}
       showsVerticalScrollIndicator={false}
     >
-      {/* Restaurantnaam */}
       <Text style={styles.restaurantNaam}>
         Mijn Restaurant
       </Text>
@@ -26,7 +25,6 @@ export default function HomeScreen() {
         Lekker eten, gezellig genieten
       </Text>
 
-      {/* Restaurantfoto */}
       <Image
         source={{
           uri: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1000&q=80',
